@@ -1,0 +1,83 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-\\": "workspace::ToggleBottomDock",
+      "cmd-p": "command_palette::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-i": "editor::ShowCompletions",
+      "cmd-o": "file_finder::Toggle"
+    }
+  },
+  {
+    // normal mode || visual mode
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "space c": "pane::CloseActiveItem",
+      "g r": "editor::FindAllReferences",
+      "shift-k": "editor::Hover",
+      "space n": "pane::ActivateNextItem",
+      "space b": "pane::ActivatePrevItem",
+      "space f": "file_finder::Toggle",
+      "space w": "workspace::SaveAll",
+      "space /": "editor::ToggleComments",
+      "space t": "theme_selector::Toggle",
+      "space l r": "editor::RestartLanguageServer",
+      "space l s": "language_selector::Toggle"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "h": "project_panel::CollapseSelectedEntry",
+      "k": "menu::SelectPrev",
+      "j": "menu::SelectNext",
+      "l": "project_panel::ExpandSelectedEntry",
+      "a": "project_panel::NewFile",
+      "cmd-a": "project_panel::NewDirectory",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "cmd-alt-c": "project_panel::CopyPath",
+      "alt-cmd-shift-c": "project_panel::CopyRelativePath",
+      "r": "project_panel::Rename",
+      "enter": "project_panel::Open",
+      "d": "project_panel::Delete",
+      "alt-cmd-r": "project_panel::RevealInFinder",
+      "alt-shift-f": "project_panel::NewSearchInDirectory"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "up": "editor::ContextMenuPrev",
+      "down": "editor::ContextMenuNext",
+      "tab": "editor::ContextMenuNext",
+      "shift+tab": "editor::ContextMenuPrev", // 들여쓰기 취소도 같이 동작해버림..
+      "ctrl-p": "editor::ContextMenuPrev",
+      "ctrl-n": "editor::ContextMenuNext",
+      "pageup": "editor::ContextMenuFirst",
+      "pagedown": "editor::ContextMenuLast"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-k k": "pane::SplitUp",
+      "cmd-k j": "pane::SplitDown",
+      "cmd-k h": "pane::SplitLeft",
+      "cmd-k l": "pane::SplitRight"
+    }
+  }
+]

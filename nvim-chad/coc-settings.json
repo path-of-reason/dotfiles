@@ -1,0 +1,18 @@
+{
+  "languageserver": {
+    "rescript": {
+      "enable": true,
+      "module": "rescript-language-server",
+      "args": [
+        "--node-ipc"
+      ],
+      "filetypes": [
+        "rescript"
+      ],
+      "rootPatterns": [
+        "rescript.json",
+        "bsconfig.json"
+      ]
+    }
+  }
+}
