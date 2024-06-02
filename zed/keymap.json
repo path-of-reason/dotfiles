@@ -6,6 +6,12 @@
       "cmd-p": "command_palette::Toggle"
     }
   },
+  // {
+  //   "context": "Workspace",
+  //   "bindings": {
+  //     "space e": "workspace::ToggleLeftDock"
+  //   }
+  // },
   {
     "context": "Editor",
     "bindings": {
@@ -24,9 +30,10 @@
       "space n": "pane::ActivateNextItem",
       "space b": "pane::ActivatePrevItem",
       "space f": "file_finder::Toggle",
+      "space t": "pane::DeploySearch", // full text search
       "space w": "workspace::SaveAll",
       "space /": "editor::ToggleComments",
-      "space t": "theme_selector::Toggle",
+      // "space t": "theme_selector::Toggle",
       "space l r": "editor::RestartLanguageServer",
       "space l s": "language_selector::Toggle"
     }

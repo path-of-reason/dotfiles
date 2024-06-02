@@ -56,9 +56,9 @@ lvim.plugins = {
     },
   },
   --rescript
-  { 'rescript-lang/vim-rescript', ft = "rescript" },
+  -- { 'rescript-lang/vim-rescript', ft = "rescript" },
   -- for clojure evaluation
-  'Olical/conjure',
+  -- 'Olical/conjure',
   'radenling/vim-dispatch-neovim',
   -- custom snippets
   -- 'SirVer/ultisnips',

@@ -1,18 +1,23 @@
-# Created by Zap installer
+# Zap
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
-plug "zsh-users/zsh-autosuggestions"
-# 이전에 사용했던것들 옅은 색으로 보여주고 오른쪽 키 누르면 완성 
-plug "zap-zsh/supercharge"
-# cd 키워드 없이 폴더이동 가능, 
-# git c등 명령어 이후 탭키 누르면 리스트업됨
+
 plug "zsh-users/zsh-syntax-highlighting"
+plug "zsh-users/zsh-autosuggestions"
+plug "hlissner/zsh-autopair"
+
+# 슈퍼차지
+## cd 키워드 없이 폴더이동 가능, 
+## git c등 명령어 이후 탭키 누르면 리스트업됨
+plug "zap-zsh/supercharge"
+
+# 단축키 알림 메시지
 plug "MichaelAquilina/zsh-you-should-use"
-# 단축키 있을때 알려줌 인텔리제이의 키프로모터와 같은 역할
 
+# zoxide
 plug "agkozak/zsh-z"
-# 디렉터리 변경 히스토리를 운영해서 퍼지파인더 방식으로 단축키 운영
 
-plug "zap-zsh/exa"
+# plug "zap-zsh/exa"
+# colorls사용해서 필요없을듯
 # exa 를 오버라이드해서 tree ls로 변환, 아이콘 보여줌
 # brew install exa 필요
 
@@ -34,12 +39,12 @@ export FZF_CTRL_R_OPTS="
 "
 #zshrc 파일
 
-plug "hlissner/zsh-autopair"
 
 # oh my zsh plugins
 plugins=(
 	git
 	nvm
 )
+
 
 

@@ -1,10 +1,11 @@
-if vim.loader then
-  vim.loader.enable()
-end
+-- require "keymap"
+require "config"
+require "vscode"
 
-_G.dd = function(...)
-  require("util.debug").dump(...)
-end
-vim.print = _G.dd
-
-require("config.lazy")
+local map = require("utils").map
+vim.g.mapleader = " "
+--map("n", "<Leader>e", ":E<CR>")
+map("n", "<Leader>e", ":Neotree<CR>")
+map("n", "<Leader>w", ":w<CR>")
+map("n", "<Leader>q", ":q<CR>")
+map("n", "<Leader>L", ":Lazy<CR>")

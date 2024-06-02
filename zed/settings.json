@@ -21,13 +21,17 @@
   "telemetry": {
     "diagnostics": true
   },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true
+  },
   "buffer_font_family": "Hack Nerd Font",
   "language_overrides": {
     "JavaScript": {
       "format_on_save": {
         "external": {
           "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
+          "arguments": ["--stdin-filepath", "--no-semi", "{buffer_path}"]
         }
       }
     }

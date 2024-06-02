@@ -1,6 +1,4 @@
-
 # aliases
-alias ls='colorls'
 alias vim='nvim'
 alias vimset='nvim ~/.config/nvim/init.lua'
 alias x='exit'
@@ -33,3 +31,19 @@ alias gps="git push"
 alias gpl="git pull"
 alias gch="git checkout"
 alias gb="git branch"
+
+# lad
+unalias ls
+alias l='colorls -l'
+alias ls='colorls -l' # 폴더만 보기
+alias ll='colorls -l' # list
+alias lf='colorls -f' # files
+alias ld='colorls -d' # directory
+alias la='colorls -a' # all
+alias lla='colorls -la' # list all
+alias lt='colorls --tree'
+
+# python3
+alias py='python3'
+alias pyenv='python3 -m venv'
+alias pyrun='source bin/activate'
