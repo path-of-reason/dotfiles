@@ -1,3 +1,4 @@
+-- lazy install
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
@@ -9,8 +10,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     lazypath,
   })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
+require("config.globals")
+require("config.keymaps")
+require("config.options")
+require("config.neovide")
 
 -- 플러그인 폴더의 루아 파일들을 모두 가져옴
 local plugins = "plugins"

@@ -3,6 +3,14 @@ lvim.plugins = {
   --   "neoclide/coc.nvim",
   --   branch = "release",
   -- },
+  -- {
+  --   'MeanderingProgrammer/markdown.nvim',
+  --   name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+  --   dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  --   config = function()
+  --     require('render-markdown').setup({})
+  --   end,
+  -- },
   {
     "epwalsh/obsidian.nvim",
     version = "*",
@@ -25,8 +33,8 @@ lvim.plugins = {
             new_notes_location = "current_dir",
             templates = { subdir = vim.NIL },
             disable_frontmatter = true,
-          }
-        }
+          },
+        },
       },
       mappings = {
         ["gd"] = { -- open link note
@@ -59,16 +67,16 @@ lvim.plugins = {
   -- { 'rescript-lang/vim-rescript', ft = "rescript" },
   -- for clojure evaluation
   -- 'Olical/conjure',
-  'radenling/vim-dispatch-neovim',
+  "radenling/vim-dispatch-neovim",
   -- custom snippets
   -- 'SirVer/ultisnips',
   -- for java
-  'mfussenegger/nvim-dap',
-  'mfussenegger/nvim-jdtls',
-  'nvim-lua/plenary.nvim',
+  "mfussenegger/nvim-dap",
+  "mfussenegger/nvim-jdtls",
+  "nvim-lua/plenary.nvim",
   -- git viewer
-  'rbong/vim-flog',
-  { 'tpope/vim-fugitive' },
+  "rbong/vim-flog",
+  { "tpope/vim-fugitive" },
   -- for theme
   { "xiyaowong/transparent.nvim" },
   -- surround etc
@@ -80,6 +88,6 @@ lvim.plugins = {
       require("nvim-surround").setup({
         -- Configuration here, or leave empty to use defaults
       })
-    end
+    end,
   },
 }

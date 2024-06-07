@@ -1,6 +1,7 @@
 # aliases
 alias vim='nvim'
-alias vimset='nvim ~/.config/nvim/init.lua'
+alias v='nvim'
+alias vinit='nvim ~/.config/nvim/init.lua'
 alias x='exit'
 alias :q='exit'
 alias lvim='/Users/wistaria/.local/bin/lvim'
@@ -33,7 +34,7 @@ alias gch="git checkout"
 alias gb="git branch"
 
 # lad
-unalias ls
+# unalias ls
 alias l='colorls -l'
 alias ls='colorls -l' # 폴더만 보기
 alias ll='colorls -l' # list
