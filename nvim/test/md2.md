@@ -1,2 +1,2 @@
-[[md#hello heading1]]
+[[md]]
 [[md#hello second heading]]

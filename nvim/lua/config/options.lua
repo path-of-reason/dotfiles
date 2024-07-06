@@ -1,5 +1,6 @@
 local opt = vim.opt
 
+vim.o.winwidth = 60
 -- tab indent
 opt.tabstop = 2
 opt.shiftwidth = 2
@@ -24,3 +25,6 @@ opt.encoding = "UTF-8"
 opt.cmdheight = 1
 opt.scrolloff = 10
 opt.mouse:append("a")
+
+-- markdown link
+opt.conceallevel = 2

@@ -1,6 +1,7 @@
+[[md]]
 # asdfasdf
 - hello
-- [ ] world
+- [x] world
 
 1. first
 2. second

@@ -1,7 +1,8 @@
 # aliases
 alias vim='nvim'
 alias v='nvim'
-alias vinit='nvim ~/.config/nvim/init.lua'
+alias vrc='nvim ~/.config/nvim/init.lua'
+alias lrc='lvim ~/.config/lvim/init.lua'
 alias x='exit'
 alias :q='exit'
 alias lvim='/Users/wistaria/.local/bin/lvim'
@@ -46,5 +47,8 @@ alias lt='colorls --tree'
 
 # python3
 alias py='python3'
-alias pyenv='python3 -m venv'
-alias pyrun='source bin/activate'
+alias pip='pip3'
+alias whichpy='which python3' # 가상환경 뭐쓰는지 확인하기
+alias pyenv='python3 -m venv' # 가상환경 생성하기. 뒤에 이름
+alias pyrun='source bin/activate' # 가상환경 폴더가서 실행하면 해당 가상환경 진입
+# deactivate -- 가상환경 종료

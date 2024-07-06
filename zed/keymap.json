@@ -24,11 +24,13 @@
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       "space e": "workspace::ToggleLeftDock",
-      "space c": "pane::CloseActiveItem",
       "g r": "editor::FindAllReferences",
       "shift-k": "editor::Hover",
-      "space n": "pane::ActivateNextItem",
+      "space q": "pane::CloseActiveItem",
       "space b": "pane::ActivatePrevItem",
+      "space n": "pane::ActivateNextItem",
+      "space v": "pane::SplitRight",
+      "space s": "pane::SplitDown",
       "space f": "file_finder::Toggle",
       "space t": "pane::DeploySearch", // full text search
       "space w": "workspace::SaveAll",
@@ -45,6 +47,8 @@
       "k": "menu::SelectPrev",
       "j": "menu::SelectNext",
       "l": "project_panel::ExpandSelectedEntry",
+      "L": "project_panel::Open",
+      "enter": "project_panel::Open",
       "a": "project_panel::NewFile",
       "cmd-a": "project_panel::NewDirectory",
       "x": "project_panel::Cut",
@@ -53,7 +57,6 @@
       "cmd-alt-c": "project_panel::CopyPath",
       "alt-cmd-shift-c": "project_panel::CopyRelativePath",
       "r": "project_panel::Rename",
-      "enter": "project_panel::Open",
       "d": "project_panel::Delete",
       "alt-cmd-r": "project_panel::RevealInFinder",
       "alt-shift-f": "project_panel::NewSearchInDirectory"
