@@ -1,3 +1,4 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-vim.api.nvim_set_option("clipboard", "unnamed")
+local v = vim
+v.g.mapleader = " "
+v.g.maplocalleader = " "
+v.api.nvim_set_option("clipboard", "unnamed")

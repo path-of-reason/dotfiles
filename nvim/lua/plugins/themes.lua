@@ -1,5 +1,39 @@
 return {
 	{
+		"zaldih/themery.nvim",
+		lazy = false,
+		config = function()
+			require("themery").setup({
+				themes = {
+					"tokyonight",
+					"tokyonight-night",
+					"tokyonight-storm",
+					"tokyonight-day",
+					"tokyonight-moon",
+					"catppuccin",
+					"catppuccin-frappe",
+					"catppuccin-latte",
+					"catppuccin-macchiato",
+					"catppuccin-mocha",
+					"solarized-osaka",
+					"lackluster",
+					"lackluster-dark",
+					"lackluster-hack",
+					"lackluster-mint",
+					"lackluster-night",
+					"nordic",
+				}, -- 설치된 컬러스킴 목록
+				livePreview = true, -- 테마 선택 시 바로 적용. 기본값은 true
+			})
+		end,
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		lazy = false,

@@ -29,6 +29,7 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
+			local wk = require("which-key")
 			local v = vim
 			lspconfig.lua_ls.setup({})
 			lspconfig.html.setup({})
@@ -53,22 +54,34 @@ return {
 
 			map("K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 			map("gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
-			-- 이걸로 하면 리스타트 할때마다 오류나던데..
-			-- map("K", v.lsp.buf.hover)
-			-- map("gd", v.lsp.buf.definition)
-			-- map("<leader>la", v.lsp.buf.code_action)
-			map("<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>")
-			map("<leader>ld", v.diagnostic.setqflist)
-			map("<leader>lr", ":LspRestart<CR>")
-
-			map("gl", v.diagnostic.open_float)
-			map("gv", function()
-				v.cmd([[vsplit]])
-				v.cmd([[wincmd l]])
-				v.lsp.buf.definition()
-			end)
-
-			-- map("<leader>ld", "<cmd>lua v.diagnostic.setqflist({ severity = v.diagnostic.severity.WARN })<CR>")
+			wk.add({
+				{ "<leader>l", group = "lsp" },
+				{ "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", desc = "code action" },
+				{ "<leader>ld", v.diagnostic.setqflist, desc = "diagnostic" },
+				{ "<leader>lr", ":LspRestart<CR>", desc = "lsp restart" },
+				{ "<leader>lv", ":Vista nvim_lsp<CR>", desc = "lsp tree" },
+				{ "g", group = "go to" },
+				{ "gl", v.diagnostic.open_float, desc = "open diagnostic float" },
+				{ "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", desc = "go to definition" },
+				{
+					"gs",
+					function()
+						v.cmd([[split]])
+						v.cmd([[wincmd l]])
+						v.lsp.buf.definition()
+					end,
+					desc = "open definition vertical",
+				},
+				{
+					"gv",
+					function()
+						v.cmd([[vsplit]])
+						v.cmd([[wincmd l]])
+						v.lsp.buf.definition()
+					end,
+					desc = "open definition vertical",
+				},
+			})
 		end,
 	},
 }

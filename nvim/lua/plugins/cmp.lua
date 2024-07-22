@@ -17,14 +17,15 @@ return {
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
+			local v = vim
 
 			-- load snippets
 			require("luasnip.loaders.from_vscode").lazy_load()
 
 			local has_words_before = function()
-				local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
+				local line, col = table.unpack(v.api.nvim_win_get_cursor(0))
 				return col ~= 0
-					and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+					and v.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 			end
 
 			local function jumpable(dir)
@@ -33,8 +34,8 @@ return {
 					return false
 				end
 
-				local win_get_cursor = vim.api.nvim_win_get_cursor
-				local get_current_buf = vim.api.nvim_get_current_buf
+				local win_get_cursor = v.api.nvim_win_get_cursor
+				local get_current_buf = v.api.nvim_get_current_buf
 
 				---sets the current buffer's luasnip to the one nearest the cursor
 				---@return boolean true if a node is found, false otherwise
