@@ -2,12 +2,12 @@
 alias vim='nvim'
 alias v='nvim'
 alias vrc='nvim ~/.config/nvim/init.lua'
-alias lrc='lvim ~/.config/lvim/init.lua'
+alias lrc='nvim ~/.config/lvim/init.lua'
+alias krc='nvim ~/.config/kitty/kitty.conf'
 alias x='exit'
-alias :q='exit'
 alias lvim='/Users/wistaria/.local/bin/lvim'
 alias c='clear'
-alias rc='lvim ~/.config/zsh/'
+alias rc='nvim ~/.config/zsh/'
 alias s='source $HOME/.zshrc'
 alias yb='yabai --start-service'
 alias hk='skhd --start-service'
@@ -17,15 +17,21 @@ function mc {
   mkdir -p $1
   cd $1
 }
-function d {
+function del {
   rm -rf $1
 }
 alias ip="curl -s https://checkip.org | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'"
+# docker
+alias d="docker"
+alias dls="docker images"
+alias dps="docker ps"
+alias dpa="docker ps -a"
+alias drun="docker run -d -p 80:80"
+# kitty term
+alias icat="kitten icat"
 # node pkg manager
-
 alias pn="pnpm"
 alias y="yarn"
-
 # git
 alias ga="git add ."
 alias gc="git commit -m"
