@@ -5,11 +5,11 @@ import = ["~/.config/alacritty/themes/themes/marine_dark.toml"]
 live_config_reload = true
 
 [window]
-opacity = 0.65
+opacity = 0.8
 dynamic_padding = true
 decorations = "buttonless"
 # decorations = "Transparent"
-blur = true
+# blur = true
 
 [window.padding]
 x = 5 # 18

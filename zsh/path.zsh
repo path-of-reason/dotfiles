@@ -13,6 +13,9 @@ export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+# brew
+# export DYLD_FALLBACK_LIBRARY_PATH="/opt/homebrew/lib:$DYLD_FALLBACK_LIBRARY_PATH"
+export DYLD_FALLBACK_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_FALLBACK_LIBRARY_PATH"
 
 # asdf 자바 홈 만들기
 # export PATH="/Users/wistaria/.asdf/shims:$PATH"
@@ -27,4 +30,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # zsh completions have been installed to:
   # /opt/homebrew/share/zsh/site-functions
-

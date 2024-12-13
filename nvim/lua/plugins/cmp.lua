@@ -13,11 +13,17 @@ return {
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
 			"rafamadriz/friendly-snippets",
+			"roobert/tailwindcss-colorizer-cmp.nvim",
+			"MeanderingProgrammer/render-markdown.nvim",
 		},
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
+			local tailwindcss_colorizer = require("tailwindcss-colorizer-cmp") -- Import the tailwind colorizer plugin
 			local v = vim
+
+			-- Set up the tailwindcss-colorizer-cmp
+			tailwindcss_colorizer.setup({ color_square_width = 2 })
 
 			-- load snippets
 			require("luasnip.loaders.from_vscode").lazy_load()
@@ -119,6 +125,9 @@ return {
 			end
 
 			cmp.setup({
+				formatting = {
+					format = tailwindcss_colorizer.formatter, -- Use tailwindcss-colorizer-cmp formatter
+				},
 				snippet = {
 					expand = function(args)
 						luasnip.lsp_expand(args.body)
@@ -166,6 +175,7 @@ return {
 					{ name = "buffer", max_item_count = 5 }, -- text within current buffer
 					{ name = "path", max_item_count = 3 }, -- file system paths
 					{ name = "luasnip", max_item_count = 3 }, -- snippets
+					{ name = "render-markdown" },
 				}),
 			})
 		end,

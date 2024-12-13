@@ -1,11 +1,7 @@
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
-	opts = {
-		-- your configuration comes here
-		-- or leave it empty to use the default settings
-		-- refer to the configuration section below
-	},
+	opts = {},
 	config = function()
 		local wk = require("which-key")
 		wk.add({
@@ -15,6 +11,14 @@ return {
 			{ "<Leader>q", ":bd<CR>", desc = "remove buffer" },
 			{ "<Leader>e", ":Neotree toggle<CR>", desc = "toggle Neotree" },
 			{ "<Leader><Tab>", ":Neotree buffers toggle<CR>", desc = "toggle Neotree buffers" },
+
+			-- runc group
+			{ "<Leader>r", group = "runners" },
+			{ "<Leader>rc", ":!pwd<CR>", desc = "current path" },
+			{ "<Leader>rf", ":lua RunFile()<CR>", desc = "run python, bun, rust" },
+			-- { "<Leader>rm", ":lua RunPyModule()<CR>", desc = "run python module" },
+			-- { "<Leader>rpa", ":lua Venv_activate()<CR>", desc = "run python venv activate" },
+			-- { "<Leader>rpd", ":lua Venv_deactivate()<CR>", desc = "run python venv deactivate" },
 
 			-- terminal
 			{ "<leader>t", group = "terminal & theme" },
@@ -36,6 +40,9 @@ return {
 			{ "<leader>p", group = "parser" },
 			{ "<Leader>pt", ":InspectTree<CR>", desc = "parser tree" },
 			{ "<Leader>pq", ":EditQuery<CR>", desc = "parser query" },
+
+			-- undo tree
+			{ "<Leader>u", ":UndotreeToggle<CR>", desc = "toggle undo tree" },
 		})
 	end,
 	keys = {},

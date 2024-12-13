@@ -35,4 +35,5 @@ yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^카카오톡$" manage=off 
 yabai -m rule --add app="^DeepL$" manage=off 
 yabai -m rule --add app="^useractivityd$" manage=off 
+yabai -m rule --add app="^Alacritty$" manage=off 
 # yabai -m rule --add app="^카카오톡$" manage=off 

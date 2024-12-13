@@ -2,5 +2,11 @@ return {
 	"akinsho/toggleterm.nvim",
 	version = "*",
 	config = true,
-	opts = {},
+	opts = {
+		direction = "float",
+		start_in_insert = true,
+		float_opts = {
+			border = "curved",
+		},
+	},
 }

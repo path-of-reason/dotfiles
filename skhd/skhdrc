@@ -51,3 +51,5 @@ ctrl + alt - s : yabai --start-service
 shift + ctrl - q : skhd --start-service
 shift + ctrl - s : skhd --stop-service
 shift + ctrl - r : skhd --restart-service
+
+

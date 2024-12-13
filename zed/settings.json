@@ -7,9 +7,27 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
+  "active_pane_modifiers": {
+    "magnification": 1.6,
+    "border_size": 0.0,
+    "inactive_opacity": 0.0
+  },
   "vim_mode": true,
   "base_keymap": "VSCode",
-  "theme": "Tokyo Night",
+  "theme": "Solarized Dark Transparent",
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "autosave": "on_focus_change",
@@ -25,6 +43,29 @@
     "breadcrumbs": true,
     "quick_actions": true
   },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
+  },
+  "tabs": {
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true,
+    "activate_on_close": "history",
+    "always_show_close_button": false
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50
+  },
+  "current_line_highlight": "all",
+  // "cursor_blink": true,
+  // "cursor_shape": "hollow",
   "buffer_font_family": "Hack Nerd Font",
   "language_overrides": {
     "JavaScript": {

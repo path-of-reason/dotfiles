@@ -35,12 +35,23 @@ function sdt() {
   --preview-window=right:50%) && cd "$dir"
 }
 
+
+
+function ktab() {
+  # 첫 번째 인자를 받아 탭 이름을 설정
+  if [ -z "$1" ]; then
+    echo "사용법: ktab <탭 이름>"
+    return 1
+  fi
+  # OSC 0 시퀀스로 탭 이름을 변경
+  echo -e "\033]0;$1\007"
+}
+
 # 위젯 등록
+zle -N ktap
 zle -N sdt
 zle -N fif
 
 # 키바인딩 컨트롤 o
-bindkey '^p' sdt
-bindkey '^o' fif
-
-
+# bindkey '^p' sdt
+# bindkey '^o' fif

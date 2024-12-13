@@ -149,7 +149,6 @@ return {
 					["A"] = "add_directory", -- also accepts the optional config.show_path option like "add". this also supports BASH style brace expansion.
 					["d"] = "delete",
 					["r"] = "rename",
-					["y"] = "copy_to_clipboard",
 					["x"] = "cut_to_clipboard",
 					["p"] = "paste_from_clipboard",
 					["c"] = "copy", -- takes text input for destination, also accepts the optional config.show_path option like "add":
@@ -166,6 +165,42 @@ return {
 					["<"] = "prev_source",
 					[">"] = "next_source",
 					["i"] = "show_file_details",
+					-- ["y"] = "copy_to_clipboard",
+					["y"] = function(state)
+						local node = state.tree:get_node()
+						local filepath = node:get_id()
+						local filename = node.name
+						local modify = vim.fn.fnamemodify
+
+						local results = {
+							filepath,
+							modify(filepath, ":."),
+							modify(filepath, ":~"),
+							filename,
+							modify(filename, ":r"),
+							modify(filename, ":e"),
+						}
+
+						-- absolute path to clipboard
+						local i = vim.fn.inputlist({
+							"Choose to copy to clipboard:",
+							"1. Absolute path: " .. results[1],
+							"2. Path relative to CWD: " .. results[2],
+							"3. Path relative to HOME: " .. results[3],
+							"4. Filename: " .. results[4],
+							"5. Filename without extension: " .. results[5],
+							"6. Extension of the filename: " .. results[6],
+						})
+
+						if i > 0 then
+							local result = results[i]
+							if not result then
+								return print("Invalid choice: " .. i)
+							end
+							vim.fn.setreg("+", result)
+							vim.notify("Copied: " .. result)
+						end
+					end,
 				},
 			},
 			nesting_rules = {},
@@ -177,6 +212,7 @@ return {
 					hide_hidden = true, -- only works on Windows for hidden files/directories
 					hide_by_name = {
 						--"node_modules"
+						"__pycache__",
 					},
 					hide_by_pattern = { -- uses glob style patterns
 						--"*.meta",
