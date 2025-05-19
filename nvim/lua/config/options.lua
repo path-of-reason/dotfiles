@@ -1,6 +1,7 @@
 local opt = vim.opt
 
-vim.o.winwidth = 60
+-- vim.o.winwidth = 80
+-- vim.o.winheight = 80
 -- tab indent
 opt.tabstop = 2
 opt.shiftwidth = 2
@@ -11,12 +12,12 @@ opt.wrap = false
 
 -- search
 opt.incsearch = true
-opt.ignorecase = true
+opt.ignorecase = false
 opt.smartcase = true
 
 -- visual
+-- opt.relativenumber = true
 opt.number = true
-opt.relativenumber = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
 
@@ -28,3 +29,8 @@ opt.mouse:append("a")
 
 -- markdown link
 opt.conceallevel = 2
+
+---
+vim.diagnostic.config({
+	virtual_text = { current_line = true },
+})

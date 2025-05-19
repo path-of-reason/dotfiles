@@ -58,9 +58,10 @@
       "space s f": "file_finder::Toggle",
       "space s t": "pane::DeploySearch", // full text search
       "space q": "pane::CloseActiveItem",
-      // 탭이동
       "space b": "pane::ActivatePrevItem",
       "space n": "pane::ActivateNextItem",
+      "space s v": "pane::SplitRight",
+      "space s s": "pane::SplitDown",
       "space w": "workspace::SaveAll",
       "space /": "editor::ToggleComments",
       "space l r": "editor::RestartLanguageServer",
@@ -68,13 +69,8 @@
       "space t": "theme_selector::Toggle",
       "g r": "editor::FindAllReferences",
       "g c": "vim::ToggleComments",
-      // "g d": "editor::GoToDefinition", // 기본 빔 키바인딩에 지정되어있음
-      "g D": "editor::GoToTypeDefinition",
-      "space s v": "pane::SplitRight",
-      "space s s": "pane::SplitDown",
-      "g v": "editor::GoToDefinitionSplit",
-      "g V": "editor::GoToTypeDefinitionSplit",
-      // "g s": search from symbols list
+      "g v": ["pane::SplitRight", "editor::GoToDefinition"],
+      "g s": ["pane::SplitDown", "editor::GoToDefinition"],
       "shift-k": "editor::Hover",
       "shift-[": "pane::GoBack",
       "shift-]": "pane::GoForward",
@@ -84,10 +80,10 @@
       "ctrl-k": "workspace::ActivateNextPane",
       "ctrl-l": "workspace::ActivateNextPane",
       // 패인 사이즈 조절 settings 에서 마그네틱 옵션 있으면 작동안함
-      "ctrl-.": "vim::ResizePaneRight",
-      "ctrl-,": "vim::ResizePaneLeft",
-      "ctrl--": "vim::ResizePaneDown",
-      "ctrl-=": "vim::ResizePaneUp",
+      "ctrl-.": ["vim::ResizePane", "Widen"],
+      "ctrl-,": ["vim::ResizePane", "Narrow"],
+      "ctrl--": ["vim::ResizePane", "Shorten"],
+      "ctrl-=": ["vim::ResizePane", "Lengthen"],
       "ctrl-enter": "workspace::ToggleZoom"
     }
   },

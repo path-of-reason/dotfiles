@@ -25,6 +25,9 @@ return {
 			-- Set up the tailwindcss-colorizer-cmp
 			tailwindcss_colorizer.setup({ color_square_width = 2 })
 
+			-- Add this section to extend filetypes
+			require("luasnip").filetype_extend("javascriptreact", { "html" })
+			require("luasnip").filetype_extend("typescriptreact", { "html" })
 			-- load snippets
 			require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -171,10 +174,11 @@ return {
 				}),
 				-- autocompletion sources
 				sources = cmp.config.sources({
+					-- { name = "cmp_luasnip" }, -- <-- 스니펫 소스를 버퍼 소스보다 위로 이동
 					{ name = "nvim_lsp" }, -- lsp
+					{ name = "luasnip", max_item_count = 3 }, -- snippets
 					{ name = "buffer", max_item_count = 5 }, -- text within current buffer
 					{ name = "path", max_item_count = 3 }, -- file system paths
-					{ name = "luasnip", max_item_count = 3 }, -- snippets
 					{ name = "render-markdown" },
 				}),
 			})

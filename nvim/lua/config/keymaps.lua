@@ -1,9 +1,7 @@
 local map = require("utils.keyMapper").map
 local v = vim
 --map(from, to, mode="n", opts)
-
 -- for nvim function dev
-
 -- indent
 map("<", "<gv", "v")
 map(">", ">gv", "v")
@@ -12,6 +10,7 @@ map(">", ">gv", "v")
 -- map("<Leader>t", ":Telescope live_grep<CR>", "n")
 
 map("<Leader>L", ":Lazy<CR>")
+map("<Leader>M", ":Mason<CR>")
 
 -- buffer previos next
 map("<Leader>b", ":bprevious<CR>")

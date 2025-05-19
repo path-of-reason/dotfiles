@@ -21,9 +21,9 @@ v.opt.rtp:prepend(lazypath)
 
 require("config.globals")
 require("config.keymaps")
-require("config.options")
 require("config.neovide")
-require("config.functions")
+require("config.iabbr")
+require("config.options")
 
 -- luarocks
 -- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua"

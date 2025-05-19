@@ -9,6 +9,8 @@ return {
 	},
 	config = function()
 		local v = vim
+		local M = require("config.module_fn")
+
 		v.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
 		v.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
 		v.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
@@ -151,7 +153,7 @@ return {
 					["r"] = "rename",
 					["x"] = "cut_to_clipboard",
 					["p"] = "paste_from_clipboard",
-					["c"] = "copy", -- takes text input for destination, also accepts the optional config.show_path option like "add":
+					["c"] = "copy_to_clipboard", -- takes text input for destination, also accepts the optional config.show_path option like "add":
 					-- ["c"] = {
 					--  "copy",
 					--  config = {
@@ -165,42 +167,10 @@ return {
 					["<"] = "prev_source",
 					[">"] = "next_source",
 					["i"] = "show_file_details",
-					-- ["y"] = "copy_to_clipboard",
-					["y"] = function(state)
-						local node = state.tree:get_node()
-						local filepath = node:get_id()
-						local filename = node.name
-						local modify = vim.fn.fnamemodify
-
-						local results = {
-							filepath,
-							modify(filepath, ":."),
-							modify(filepath, ":~"),
-							filename,
-							modify(filename, ":r"),
-							modify(filename, ":e"),
-						}
-
-						-- absolute path to clipboard
-						local i = vim.fn.inputlist({
-							"Choose to copy to clipboard:",
-							"1. Absolute path: " .. results[1],
-							"2. Path relative to CWD: " .. results[2],
-							"3. Path relative to HOME: " .. results[3],
-							"4. Filename: " .. results[4],
-							"5. Filename without extension: " .. results[5],
-							"6. Extension of the filename: " .. results[6],
-						})
-
-						if i > 0 then
-							local result = results[i]
-							if not result then
-								return print("Invalid choice: " .. i)
-							end
-							vim.fn.setreg("+", result)
-							vim.notify("Copied: " .. result)
-						end
-					end,
+					["I"] = M.file_or_folder_size,
+					["O"] = M.open_externally,
+					["Y"] = "copy_to_clipboard",
+					["y"] = M.copy_file_info_to_clipboard,
 				},
 			},
 			nesting_rules = {},
@@ -217,6 +187,7 @@ return {
 					hide_by_pattern = { -- uses glob style patterns
 						--"*.meta",
 						--"*/src/*/tsconfig.json",
+						"._**", -- 이 줄을 추가합니다.
 					},
 					always_show = { -- remains visible even if other settings would normally hide it
 						--".gitignored",

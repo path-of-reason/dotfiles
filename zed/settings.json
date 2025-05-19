@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "collaboration_panel": {
     "dock": "right"
   },
@@ -23,15 +26,16 @@
   "active_pane_modifiers": {
     "magnification": 1.6,
     "border_size": 0.0,
-    "inactive_opacity": 0.0
+    "inactive_opacity": 0.6 // 비활성 창 투명도
   },
   "vim_mode": true,
   "base_keymap": "VSCode",
-  "theme": "Solarized Dark Transparent",
+  "theme": "Tokyo Night",
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "autosave": "on_focus_change",
-  "cursor_blink": false,
+  "cursor_blink": true,
+  // "cursor_shape": "hollow",
   "relative_line_numbers": true,
   "format_on_save": "on",
   "remove_trailing_whitespace_on_save": true,
@@ -56,16 +60,14 @@
   },
   "inlay_hints": {
     "enabled": true,
-    "show_type_hints": true,
+    "show_type_hints": false, // 켜면 지저분함
     "show_parameter_hints": true,
     "show_other_hints": true,
-    "show_background": false,
+    "show_background": false, // 힌트 배경색 (글자안보임)
     "edit_debounce_ms": 700,
     "scroll_debounce_ms": 50
   },
   "current_line_highlight": "all",
-  // "cursor_blink": true,
-  // "cursor_shape": "hollow",
   "buffer_font_family": "Hack Nerd Font",
   "language_overrides": {
     "JavaScript": {
