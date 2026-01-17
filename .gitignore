@@ -1,0 +1,17 @@
+autostart/
+coc/
+configstore/
+exercism/
+fish/
+github-copilot/
+gtk-2.0/
+helix/
+joplin-desktop/
+neovide/
+raycast/
+simple-update-notifier/
+yarn/
+lvim/
+neovide_backtraces.log
+
+

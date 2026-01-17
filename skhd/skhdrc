@@ -1,0 +1,55 @@
+# https://github.com/josean-dev/dev-environment-files/blob/main/.config/skhd/skhdrc
+# alt = option
+
+# 화면 고르기, 됨, 자주씀
+alt - j : yabai -m window --focus south
+alt - l : yabai -m window --focus east
+
+# 화면 바꾸기 왼쪽 오른쪽
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - l : yabai -m window --warp east
+# 화면 바꾸기 회전
+ctrl + alt - r : yabai -m space --rotate 270 # Rotate layout clockwise
+
+# 화면 크기 최대화 자주씀
+ctrl + alt - return : yabai -m window --toggle zoom-fullscreen
+
+# stop/start/restart yabai
+ctrl + alt - q : yabai --stop-service
+ctrl + alt - s : yabai --start-service
+# stop/start/restart skhd
+shift + ctrl + alt - r : skhd --restart-service
+# shift + ctrl - q : skhd --start-service
+# shift + ctrl - s : skhd --stop-service
+
+
+
+# 화면 선택, 잘 안씀
+# alt - k : yabai -m window --focus north
+# alt - h : yabai -m window --focus west
+# Change focus between external displays
+# alt - b : yabai -m display --focus west
+# alt - n : yabai -m display --focus east
+# alt - m : yabai -m display --focus recent
+
+# move window to display left and right
+# shift + alt - , : yabai -m window --display west; yabai -m display --focus west;
+# shift + alt - . : yabai -m window --display east; yabai -m display --focus east;
+#
+## 이거 왜 다 안되냐.. 화면 넘기기, 데스크탑이동, 근데 안됌
+# shift + alt - h : yabai -m window --space prev;
+# shift + alt - l : yabai -m window --space next;
+# shift + alt - 1 : yabai -m window --space 1;
+# shift + alt - 2 : yabai -m window --space 2;
+# shift + alt - 3 : yabai -m window --space 3;
+# shift + alt - 4 : yabai -m window --space 4;
+# shift + alt - 5 : yabai -m window --space 5;
+# shift + alt - 6 : yabai -m window --space 6;
+# shift + alt - 7 : yabai -m window --space 7;
+#
+# space balance reset
+# ctrl + alt - e : yabai -m space --balance 
+
+# move position in same space
+# ctrl + alt - j : yabai -m window --warp south
+# ctrl + alt - k : yabai -m window --warp north

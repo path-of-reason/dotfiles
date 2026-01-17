@@ -1,0 +1,108 @@
+[
+  {
+    // 빈화면, 탐색기
+    "context": "EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || Welcome || (ProjectPanel && not_editing)",
+    "bindings": {
+      "space p": "command_palette::Toggle",
+      "space o": "file_finder::Toggle",
+      "space e": "workspace::ToggleLeftDock",
+      "space s f": "file_finder::Toggle",
+      "space s t": "pane::DeploySearch"
+    }
+  },
+  {
+    // 탐색기 전용
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "h": "project_panel::CollapseSelectedEntry",
+      "k": "menu::SelectPrev",
+      "j": "menu::SelectNext",
+      "l": "project_panel::Open",
+      "enter": "project_panel::Open",
+      "a": "project_panel::NewFile",
+      "cmd-a": "project_panel::NewDirectory",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      // "y": "project_panel::CopyRelativePath",
+      "y": "workspace::CopyRelativePath",
+      "Y": "workspace::CopyPath",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      // "alt-cmd-r": "project_panel::RevealInFinder", // 파인더에서 열기
+      "cmd-f": "project_panel::NewSearchInDirectory"
+    }
+  },
+  {
+    // 항상
+    "context": "Workspace",
+    "bindings": {
+      "cmd-p": "command_palette::Toggle",
+      "ctrl-\\": "workspace::ToggleBottomDock" // terminal
+    }
+  },
+  {
+    // 에디터 텍스트 자동완성 불러오기
+    "context": "Editor",
+    "bindings": {
+      "cmd-i": "editor::ShowCompletions"
+    }
+  },
+  {
+    // normal mode || visual mode
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "space p": "command_palette::Toggle",
+      "space o": "file_finder::Toggle",
+      "space e": "workspace::ToggleLeftDock",
+      "space s f": "file_finder::Toggle",
+      "space s t": "pane::DeploySearch", // full text search
+      "space q": "pane::CloseActiveItem",
+      // 탭이동
+      "space b": "pane::ActivatePrevItem",
+      "space n": "pane::ActivateNextItem",
+      "space w": "workspace::SaveAll",
+      "space /": "editor::ToggleComments",
+      "space l r": "editor::RestartLanguageServer",
+      "space l s": "language_selector::Toggle",
+      "space t": "theme_selector::Toggle",
+      "g r": "editor::FindAllReferences",
+      "g c": "vim::ToggleComments",
+      // "g d": "editor::GoToDefinition", // 기본 빔 키바인딩에 지정되어있음
+      "g D": "editor::GoToTypeDefinition",
+      "space s v": "pane::SplitRight",
+      "space s s": "pane::SplitDown",
+      "g v": "editor::GoToDefinitionSplit",
+      "g V": "editor::GoToTypeDefinitionSplit",
+      // "g s": search from symbols list
+      "shift-k": "editor::Hover",
+      "shift-[": "pane::GoBack",
+      "shift-]": "pane::GoForward",
+      // 패인 포커스 이동
+      "ctrl-h": "workspace::ActivatePreviousPane",
+      "ctrl-j": "workspace::ActivatePreviousPane",
+      "ctrl-k": "workspace::ActivateNextPane",
+      "ctrl-l": "workspace::ActivateNextPane",
+      // 패인 사이즈 조절 settings 에서 마그네틱 옵션 있으면 작동안함
+      "ctrl-.": "vim::ResizePaneRight",
+      "ctrl-,": "vim::ResizePaneLeft",
+      "ctrl--": "vim::ResizePaneDown",
+      "ctrl-=": "vim::ResizePaneUp",
+      "ctrl-enter": "workspace::ToggleZoom"
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)", // 에디터에서 자동완성이 활성화된경우
+    "bindings": {
+      "up": "editor::ContextMenuPrev",
+      "down": "editor::ContextMenuNext",
+      "tab": "editor::ContextMenuNext",
+      "pageup": "editor::ContextMenuFirst",
+      "pagedown": "editor::ContextMenuLast",
+      "cmd-j": "editor::ContextMenuNext",
+      "cmd-k": "editor::ContextMenuPrev",
+      "cmd-p": "editor::ContextMenuFirst",
+      "cmd-n": "editor::ContextMenuLast"
+    }
+  }
+]

@@ -1,0 +1,75 @@
+
+--- 자동-명령 ---
+--- 자동-명령 ---
+lualine  BufEnter
+    *         lua require'lualine.components.branch.git_branch'.find_git_dir()
+	Last set from ~/.config/nvim/vim/_editor.lua
+--- 자동-명령 ---
+--- 자동-명령 ---
+/Users/wistaria/.config/nvim/init.lua..nvim_exec2() called at /Users/wistaria/.config/nvim/init.lua:0 수행중 에러 발견:
+E216: 그런 그룹이나 이벤트 없음: FileExplorer *
+Normal         xxx guifg=#e0def4 guibg=#191724
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Comment        xxx cterm=italic gui=italic guifg=#908caa
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Constant       xxx guifg=#f6c177
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Special        xxx guifg=#9ccfd8
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Identifier     xxx guifg=#e0def4
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Statement      xxx cterm=bold gui=bold guifg=#31748f
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+PreProc        xxx links to PreCondit
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Type           xxx guifg=#9ccfd8
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Underlined     xxx cterm=underline gui=underline guifg=#c4a7e7
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Todo           xxx guifg=#ebbcba guibg=#433842
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+String         xxx guifg=#f6c177
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Function       xxx guifg=#ebbcba
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Conditional    xxx guifg=#31748f
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Repeat         xxx guifg=#31748f
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Operator       xxx guifg=#908caa
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+Structure      xxx guifg=#9ccfd8
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+LineNr         xxx guifg=#6e6a86
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+NonText        xxx guifg=#6e6a86
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+SignColumn     xxx guifg=#e0def4
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+CursorLineNr   xxx cterm=bold gui=bold guifg=#e0def4
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+EndOfBuffer    xxx links to NonText
+	Last set from ~/.config/nvim/vim/_editor.lua
+VertSplit      xxx guifg=#6e6a86
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+NormalNC       xxx guifg=#e0def4 guibg=#191724
+	Last set from ~/.local/share/nvim/lazy/rose-pine/lua/rose-pine.lua line 1139
+--- 자동-명령 ---
+--- 자동-명령 ---
+lualine  BufEnter
+    *         lua require'lualine.components.branch.git_branch'.find_git_dir()
+	Last set from ~/.config/nvim/vim/_editor.lua
+--- 자동-명령 ---
+--- 자동-명령 ---
+1
+1
+
+
+
+
+
+
+"~/.config/nvim/init.lua" 
+"~/.config/nvim/init.lua" 7L, 102B 저장 했습니다
+"~/.config/nvim/init.lua" 7L, 102B 저장 했습니다
+
